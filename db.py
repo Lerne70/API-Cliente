@@ -1,5 +1,6 @@
 import pymysql
 
+# Conectar con base de datos 
 conn = pymysql.connect(
     host='sql5.freesqldatabase.com',
     database='sql5439612',
@@ -9,6 +10,7 @@ conn = pymysql.connect(
     cursorclass=pymysql.cursors.DictCursor
     )
 
+# Creando la tabla 
 cursor = conn.cursor()
 sql_query = """ CREATE TABLE cliente (
     id int(11) NOT NULL AUTO_INCREMENT,
